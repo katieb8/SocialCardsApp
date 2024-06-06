@@ -1,18 +1,17 @@
-import { useState } from 'react'
-import './App.css'
+import React from 'react';
+import SocialCard1 from "./components/SocialCard1.jsx";
+import "./index.css";
+import cardData from "./CardData";
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const socialCardItems = cardData.map((item) => (
+    <SocialCard1 key={item.id} item={item} />
+  ));
 
-  return (
-    <>
-      <div className="App">
-        <div className="content">
-          <h1>App Content</h1>
-        </div>
-      </div>
-    </>
-  )
+  return(
+    <div className="App">
+      <h1 className='pageTitle'>Social Cards</h1>
+      <div className="grid-wrap">{socialCardItems}</div>
+    </div>
+  );
 }
-
-export default App;
