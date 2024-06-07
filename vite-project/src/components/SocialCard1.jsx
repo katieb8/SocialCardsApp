@@ -1,13 +1,14 @@
-import React from 'react';
-
-export default function SocialCard1(props) {
+const SocialCard1 = ({ userData }) => {
     return (
-        <>
-            <div className="socialCard1">
-                <h2 className="card-title">{props.item.name}</h2>
-                <img className="cardImage" src={props.item.image} alt={`picture of ${props.item.name}`} />
-                <p className="card-text">{props.item.desc}</p>
-            </div>
-        </>
-    );
-}
+<div className="card">
+<div className="card__title">{userData.name.first} {userData.name.last}</div>
+<div className="card__body">
+<Location location={userData.location}/>
+<div className="card__image"><img src={userData.picture.medium}/></div>
+</div>
+ 
+        </div>
+    )
+};
+ 
+export default SocialCard1;

@@ -1,26 +1,19 @@
-const cardData = [
-    {
-      id: 0,
-      name: "Gordon",
-      image:
-        "./images/person1.jpg",
-      desc: "I'm a chef"
-    },
-    {
-      id: 1,
-      name: "Jamie",
-      image:
-        "./images/person2.jpg",
-      desc: "Me too"
-    },
-    {
-      id: 2,
-      name: "Gino",
-      image:
-        "./images/person3.jpg",
-      desc: "Me too"
-    }
-  ];
+import React, { useState, useEffect } from 'react';
 
-  export default cardData;
-  
+export default function CardData() {
+   const [allUsers, setAllUsers] = useState([]);
+   useEffect(() => {
+    (async () => {
+      let userData;
+      try {
+        const response = await fetch("https://randomuser.me/api/?results=10");
+        userData = await response.json();
+      } catch (error) {
+        console.log(error);
+        userData = [];
+      }
+      setAllUsers(userData.results);
+    })();
+  }, 
+  []);
+};
