@@ -18,7 +18,7 @@ export function CardData() {
   }, []);
     
     return (
-      <div className="userscontainer">
+      <div className="userscontainer flex">
         {users.map((user, index) => (
           <SocialCard1 key={index} userData={user} />
         ))}
