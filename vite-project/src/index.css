@@ -1,50 +1,71 @@
 .socialCard1 {
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    box-sizing:  5px 5px 5px black;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-    display: inline-flex;
-    background-color: black;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 200px; 
-    height: 300px; 
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px; 
+  height: 300px; 
+  background-color: black;
 }
 
-    .cardImage {
-        max-width: 100%;
-        height: auto;
-        border-radius: 50%;
-        margin-bottom: 10px;
-        object-fit: cover;
-        max-height: 150px;
-    }
+.cardImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+  max-height: 150px;
+}
 
-    
-    .card-title {
-        font-family: Inter, Arial;
-        margin: 0;
-        color: white;
-    }
+.card-title {
+  font-family: Inter, Arial;
+  margin: 0;
+  color: white;
+}
 
-    .card-text {
-        color: white;
-        font-family: Inter, Arial;
-        font-size: 1rem;
-    }
-  
-  .App {
-    text-align: center;
-  }
+.card-text {
+  color: white;
+  font-family: Inter, Arial;
+  font-size: 1rem;
+}
 
-  .socialCard1:hover {
-    transform: translateY(-5px);
-  }
+.App {
+  text-align: center;
+}
 
-  .userscontainer {
-    justify-content: center;
-    max-width: 1310px;
-  }
+.socialCard1:hover {
+  transform: translateY(-5px);
+}
+
+.userscontainer {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-button:hover {
+  background-color: #0056b3;
+}
