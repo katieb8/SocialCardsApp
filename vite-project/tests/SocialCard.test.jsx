@@ -21,8 +21,9 @@ describe('Social Card', () => {
 
     test('Should render the social card', () => {
         const mockUserData = {
-            name: { first: 'John' },
-            picture: { medium: 'https://google.com' }
+            name: { first: 'John', last: 'Test' },
+            picture: { medium: 'https://google.com' },
+            location: { city: 'Portsmouth' }
         };
 
         const { container } = render(<SocialCard1 userData={mockUserData} />);
@@ -32,9 +33,10 @@ describe('Social Card', () => {
 
     it('Should render all the expected props', () => {
         const mockUserData = {
-            name: { first: 'John' },
+            name: { first: 'John', last: 'Test' },
             picture: { medium: 'https://google.com/image/thisisatest' },
-            text: 'hey'
+            text: 'hey',
+            location: { city: 'Portsmouth' }
         };
 
         const { container } = render(<SocialCard1 userData={mockUserData} />);
