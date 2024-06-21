@@ -59,6 +59,9 @@ describe('Social Card', () => {
         data.results.forEach((user) => {
             expect(user).toHaveProperty('name');
             expect(user).toHaveProperty('picture');
+
+            expect(user.name).toHaveProperty('first');
+            expect(user.picture).toHaveProperty('medium');
         })
     })
 });
