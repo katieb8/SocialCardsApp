@@ -3,19 +3,21 @@ import { expect, describe, test, it } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import SocialCard1 from '../src/components/SocialCard1';
 
-describe('Social Card', () => {
-    beforeEach(() => {
-        global.fetch = vi.fn(() =>
-          Promise.resolve({
-            status: 200,
-            json: () => Promise.resolve({ results: [] }),
-          })
-        );
-    });
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
-    afterEach(() => {
-        vi.clearAllMocks();
-    });
+describe('Social Card', () => {
+    // beforeEach(() => {
+    //     global.fetch = vi.fn(() =>
+    //       Promise.resolve({
+    //         status: 200,
+    //         json: () => Promise.resolve({ results: [] }),
+    //       })
+    //     );
+    // });
+
+    // afterEach(() => {
+    //     vi.clearAllMocks();
+    // });
 
     test('Should render the social card', () => {
         const mockUserData = {
@@ -55,7 +57,8 @@ describe('Social Card', () => {
         expect(Array.isArray(data.results)).toBe(true);
 
         data.results.forEach((user) => {
-            expect(user).toHaveProperty('name', 'poo');
+            expect(user).toHaveProperty('name');
+            expect(user).toHaveProperty('picture');
         })
     })
 });
