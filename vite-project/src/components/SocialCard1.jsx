@@ -5,7 +5,7 @@ const SocialCard1 = ({ userData }) => {
             <img className="cardImage" src={userData.picture.medium} alt={`picture of ${userData.name.first}`} data-testid={`profile-pic-${userData.name.first}`}  />
             <div className="card-text-container">
                 <p className="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci corporis illum, dolores autem, neque voluptatum reprehenderit quasi officia cum sapiente sint. Fugiat, facere architecto? Doloribus delectus dolores hic in velit.
+                    Hi I'm {userData.name.first}, welcome to my profile.
                 </p>
             </div>
         </div>
